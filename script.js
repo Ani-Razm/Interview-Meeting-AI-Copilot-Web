@@ -12,5 +12,4 @@ document.addEventListener('mousemove', function(event) {
     const x = event.pageX;
     const y = event.pageY;
     gradient.style.background = `radial-gradient(circle at ${x}px ${y}px, #7c75ff49 0.1%, var(--background-color) 30%)`;
-    console.log(`Mouse X: ${x}, Mouse Y: ${y}`);
 });
