@@ -37,7 +37,7 @@ p {
 /* header */
 
 .main-header {
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,7 +220,9 @@ h1 {
 }
 
 .stats {
-    width: 100%;
+    z-index: 1;
+    box-shadow: 0px -50px 50px 30px var(--background-color);
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -442,6 +444,10 @@ button {
     transition: all ease 0.3s;
 }
 
+.testimonial:hover{
+    transform: translate(0, -10px);
+}
+
 .author {
     display: flex;
     gap: 10px;
@@ -470,14 +476,12 @@ button {
 /* pricing section start */
 
 .pricing-section {
-    
     min-height: 90vh;
     background: #fff;
     width: 100%;
 }
 
-.pricing-plans {
-   
+.pricing-plans { 
     width: 80%;
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
@@ -491,8 +495,13 @@ button {
     gap: 20px;
     padding: 30px;
     border-radius: 15px;
-    border: 1px solid #d1d1d1;
+    border: 2px solid #d1d1d1;
     transition: all ease 0.3s;
+}
+
+.plan:hover {
+    border: 2px solid var(--main-color);
+    box-shadow: 0px 0px 10px #00000026;
 }
 
 .plan h3 {
@@ -524,13 +533,12 @@ button {
 }
 
 .plan button:hover {
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(240, 240, 240);
 }
 
 .plan:nth-child(2) {
     border: none;
 }
-
 
 .plan:nth-child(2) button {
     background: #7c75ff;
@@ -547,6 +555,10 @@ fieldset {
     border: 2px solid var(--main-color);
     border-radius: 20px;
     overflow: hidden;
+}
+
+fieldset:hover {
+    box-shadow: 0px 0px 10px #00000026;
 }
 
 legend {
@@ -610,10 +622,11 @@ legend {
 /* Integration Partners Section Start- */
 
 .partners-section {
+    margin-top: 50px;
     min-height: 70vh;
     gap: 40px;
     background-color: white;
-    width: 100%;
+    width: 100vw;
 }
 
 .partners {
@@ -647,3 +660,37 @@ img{
 }
 
 /* Integration Partners Section End */
+
+/* FAQ Section Start */
+
+.faq-section {
+    min-height: 80vh;
+}
+
+.faq {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #a6a9b526;
+    transition: all ease 0.3s;
+}
+
+.question > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* FAQ Section End */
+

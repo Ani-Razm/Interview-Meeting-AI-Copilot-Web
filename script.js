@@ -1,10 +1,10 @@
-const partners = document.querySelector('.partners');
-partners.addEventListener('mouseover', () => {
-    partners.style.animationPlayState = 'paused';
-});
-partners.addEventListener('mouseout', () => {
-    partners.style.animation = 'slide 10s linear infinite';
-});
+// const partners = document.querySelector('.partners');
+// partners.addEventListener('mouseover', () => {
+//     partners.style.animationPlayState = 'paused';
+// });
+// partners.addEventListener('mouseout', () => {
+//     partners.style.animation = 'slide 10s linear infinite';
+// });
 
 const gradient = document.querySelector('.rd-gradient');
 
