@@ -6,7 +6,7 @@
     --light-purple: #7c75ff23;
     --gray: rgb(165, 165, 165);
     --p-gray: rgb(76, 76, 76);
-    --black: #111827;
+    --black: #1e293b;
 }
 
 * {
@@ -21,6 +21,7 @@
 
 
 body {
+
     background-color: var(--background-color);
     display: flex;
     justify-content: center;
@@ -100,7 +101,7 @@ nav a:hover {
     background-size: 40px 40px;
     background-image:
         linear-gradient(to right, var(--background-color) 1px, transparent 1px),
-        linear-gradient(to bottom,var(--background-color)  1px, transparent 1px);
+        linear-gradient(to bottom, var(--background-color) 1px, transparent 1px);
 
 }
 
@@ -444,7 +445,7 @@ button {
     transition: all ease 0.3s;
 }
 
-.testimonial:hover{
+.testimonial:hover {
     transform: translate(0, -10px);
 }
 
@@ -481,14 +482,14 @@ button {
     width: 100%;
 }
 
-.pricing-plans { 
+.pricing-plans {
     width: 80%;
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
     gap: 30px;
 }
 
-.plan  {
+.plan {
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -514,7 +515,8 @@ button {
     font-weight: 600;
 }
 
-.plan span:nth-child(2), .plan li {
+.plan span:nth-child(2),
+.plan li {
     color: var(--p-gray);
 }
 
@@ -576,7 +578,7 @@ legend {
 /* How It Works Section Start */
 
 .how-it-works-section {
-    min-height: 80vh;
+    min-height: 60vh;
 }
 
 .steps {
@@ -617,13 +619,14 @@ legend {
     font-size: 2.8rem;
     color: #7c75ff69;
 }
+
 /* How It Works Section End */
 
 /* Integration Partners Section Start- */
 
 .partners-section {
     margin-top: 50px;
-    min-height: 70vh;
+    min-height: 60vh;
     gap: 40px;
     background-color: white;
     width: 100vw;
@@ -644,7 +647,7 @@ legend {
     height: 45px;
 }
 
-img{
+img {
     height: 100%;
 }
 
@@ -656,7 +659,7 @@ img{
     100% {
         transform: translateX(-100%);
     }
-    
+
 }
 
 /* Integration Partners Section End */
@@ -664,7 +667,7 @@ img{
 /* FAQ Section Start */
 
 .faq-section {
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 .faq {
@@ -686,7 +689,7 @@ img{
     transition: all ease 0.3s;
 }
 
-.question > div {
+.question>div {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -694,3 +697,102 @@ img{
 
 /* FAQ Section End */
 
+/* Footer Section Start */
+
+footer {
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    padding: 40px 40px;
+}
+
+.footer-container {  
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-tagline {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.newsletter {
+    flex: 1;
+    min-width: 250px;
+}
+
+.newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.newsletter-input {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.newsletter-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.newsletter-input button:hover {
+    background-color: #0069d9;
+}
+
+/* Footer Section End */
