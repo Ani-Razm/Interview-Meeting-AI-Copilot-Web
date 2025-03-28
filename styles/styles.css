@@ -14,14 +14,13 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--black);
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     scroll-behavior: smooth;
     scroll-margin-top: 60px;
 }
 
-
 body {
-
+    width: 100vw;
     background-color: var(--background-color);
     display: flex;
     justify-content: center;
@@ -641,14 +640,15 @@ legend {
 
 .partner {
     min-width: 20%;
+    padding: 0 6.5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45px;
+    height: 40px;
 }
 
 img {
-    height: 100%;
+    width: 100%;
 }
 
 @keyframes slide {
@@ -700,6 +700,7 @@ img {
     cursor: pointer;
     color: var(--main-color);
 }
+
 .question div:nth-child(2) {
     display: none;
 }
@@ -763,7 +764,8 @@ footer ul {
     gap: 30px;
 }
 
-footer h3, .logo {
+footer h3,
+.logo {
     color: #fff;
     font-weight: 500;
 }
@@ -777,7 +779,7 @@ footer input {
     width: 100%;
 }
 
-footer input::placeholder{
+footer input::placeholder {
     color: #9ca3af;
 }
 
@@ -795,3 +797,9 @@ footer a:hover {
 }
 
 /* Footer Section End */
+
+/* responsive design start*/
+
+@media screen and (max-width: ) {
+    
+}

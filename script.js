@@ -7,7 +7,7 @@
 //     partners.style.animation = 'slide 10s linear infinite';
 // });
 
-// hero animation
+// hero background animation
 const gradient = document.querySelector('.rd-gradient');
 
 document.addEventListener('mousemove', function (event) {
@@ -35,3 +35,26 @@ for (let question of questions) {
 
     });
 }
+
+// scroll reveal
+const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2000,
+    reset: true
+})
+
+sr.reveal (".testimonial:nth-child(1)",{delay:100});
+sr.reveal (".testimonial:nth-child(2)",{delay:300});
+sr.reveal (".testimonial:nth-child(3)",{delay:500});
+
+const sr2 = ScrollReveal({
+    origin: "top",
+    distance: "0px",
+    duration: 2000,
+    reset: true
+})
+
+sr2.reveal (".step:nth-child(1)",{delay:100});
+sr2.reveal (".step:nth-child(2)",{delay:400});
+sr2.reveal (".step:nth-child(3)",{delay:700});
