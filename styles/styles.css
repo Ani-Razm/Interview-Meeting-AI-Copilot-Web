@@ -20,7 +20,7 @@
 }
 
 body {
-    width: 100vw;
+    max-width: 100%;
     background-color: var(--background-color);
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #f9faffeb;
     padding: 10px 10%;
     box-shadow: 0px 0px 10px #a6a9b584;
@@ -80,6 +80,7 @@ nav li {
 }
 
 a {
+    z-index: 100;
     text-decoration: none;
     transition: all ease 0.4s;
 }
@@ -95,7 +96,7 @@ nav a:hover {
 }
 
 .grid {
-    height: 83vh;
+    min-height: 600px;
     width: 100vw;
     background-size: 40px 40px;
     background-image:
@@ -153,7 +154,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 730px;
 }
 
 /* hero */
@@ -216,7 +217,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60vh;
+    height: 450px;
 }
 
 .stats {
@@ -261,7 +262,7 @@ h2 {
 
 .features {
     display: grid;
-    height: 100vh;
+    height: 800px;
     grid-template: auto/ repeat(6, 1fr);
     gap: 40px;
 }
@@ -424,7 +425,7 @@ button {
 /* testimonials start */
 
 .testimonials-section {
-    min-height: 90vh;
+    min-height: 700px;
 }
 
 .testimonials {
@@ -476,7 +477,7 @@ button {
 /* pricing section start */
 
 .pricing-section {
-    min-height: 100vh;
+    min-height: 800px;
     background: #fff;
     width: 100%;
 }
@@ -577,7 +578,7 @@ legend {
 /* How It Works Section Start */
 
 .how-it-works-section {
-    min-height: 60vh;
+    min-height: 500px;
 }
 
 .steps {
@@ -625,10 +626,11 @@ legend {
 
 .partners-section {
     margin-top: 50px;
-    min-height: 60vh;
+    min-height: 450px;
     gap: 40px;
     background-color: white;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .partners {
@@ -640,11 +642,11 @@ legend {
 
 .partner {
     min-width: 20%;
-    padding: 0 6.5%;
     display: flex;
+    padding: 0px 6%;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 45px;
 }
 
 img {
@@ -668,7 +670,7 @@ img {
 
 .faq-section {
     margin: 50px 0;
-    min-height: 85vh;
+    min-height: 600px;
 }
 
 .faq {
@@ -718,7 +720,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 55vh;
+    height: 400px;
     background-color: var(--black);
     padding: 40px 10%;
 }
@@ -800,6 +802,129 @@ footer a:hover {
 
 /* responsive design start*/
 
-@media screen and (max-width: ) {
-    
+@media screen and (max-width: 1800px) {
+    .partner {
+        padding: 0 5.8%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .partner {
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #info {
+        font-size: 1.3rem;
+    }
+
+    .partner {
+        padding: 0 5%;
+    }
+
+    .leftside p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.9rem !important;
+    }
+
+    footer {
+        padding: 20px 10%;
+    }
+}
+
+
+@media screen and (max-width: 1140px) {
+
+    .partner {
+        padding: 0 4.8%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .features {
+        height: 1160px;
+    }
+
+    .feature {
+        height: 100%;
+    }
+
+    .feature:nth-child(1) {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 1;
+    }
+
+    .feature:nth-child(2) {
+        grid-column: 4 / span 3;
+        grid-row: 1 / span 1;
+    }
+
+    .feature:nth-child(3) {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 1;
+    }
+
+    .feature:nth-child(4) {
+        grid-column: 4 / span 3;
+        grid-row: 2 / span 1;
+    }
+
+    .feature:nth-child(5) {
+        grid-column: 1 / span 6;
+        grid-row: 3 / span 1;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+   
+    .hero p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    #info {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+
+    .partner {
+        padding: 0 3%;
+    }
+
+
+
 }
