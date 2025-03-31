@@ -10,29 +10,30 @@
     --white: #fff;
     --main-header: #f9faffeb;
     --icon-backgound: #f0f2ff;
+    --footer-background: #1e293b;
     --shadow: #a6a9b584;
     --shadow2: #a6a9b526;
     --shadow3: #00000026;
 }
-/* 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #0f141d;
-        --main-color: #7c75ff;
-        --light-purple: #7c75ff23;
-        --gray: rgb(85, 83, 83);
-        --p-gray: rgb(216, 216, 216);
-        --black: #f0f2ff;
-        --white: #1e293b;
-        --main-header: #1e293b;
-        --icon-backgound: #7c75ff2f;
-        --shadow: #00000084;
-        --shadow2: #00000026;
-        --shadow3: #ffffff26;
-    }
-} */
 
 
+.dark-mode {
+
+    --background-color: #090c11;
+    --main-color: #7c75ff;
+    --light-purple: #7c75ff23;
+    --gray: rgb(85, 83, 83);
+    --p-gray: rgb(216, 216, 216);
+    --black: #f0f2ff;
+    --white: #151b29;
+    --main-header: #151b29;
+    --icon-backgound: #7c75ff2f;
+    --footer-background: #151b29;
+    --shadow: none;
+    --shadow2: #00000026;
+    --shadow3: #ffffff26;
+
+}
 
 * {
     margin: 0;
@@ -42,6 +43,7 @@
     font-family: Inter, sans-serif;
     scroll-behavior: smooth;
     scroll-margin-top: 60px;
+    transition: all ease 0.3s;
 }
 
 body {
@@ -61,12 +63,26 @@ p {
 
 /* header */
 
+.toggles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#mode-toggler {
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+}
+
 .main-header i {
     font-size: 25px;
 }
 
 .bx-menu {
     display: none !important;
+    cursor: pointer;
 }
 
 .main-header {
@@ -106,7 +122,6 @@ nav ul {
 
 .logo a:hover {
     color: black;
-    ;
 }
 
 nav li {
@@ -130,7 +145,7 @@ nav a:hover {
 }
 
 .grid {
-    box-shadow: inset 0px 0px 50px 50px var(--background-color);
+    box-shadow: inset 0px -20px 50px 30px var(--background-color);
     margin-top: 60px;
     min-height: 600px;
     width: 100vw;
@@ -163,16 +178,15 @@ nav a:hover {
     color: var(--main-color);
 }
 
-
 .buttons a:hover {
     border: 1px solid rgba(142, 96, 229, 0.475);
     background-color: var(--main-color);
-    color: var(--white);
+    color: #fff !important;
 }
 
 .signup {
     background-color: var(--main-color);
-    color: var(--white) !important;
+    color: #fff !important;
 }
 
 main {
@@ -279,7 +293,7 @@ h1 {
     color: var(--main-color)
 }
 
-.stat p{
+.stat p {
     color: var(--black);
 }
 
@@ -461,7 +475,7 @@ button {
     padding: 15px 20px;
     border-radius: 8px;
     font-weight: 600;
-    color: var(--white);
+    color: #fff !important;
     cursor: pointer;
     background-color: var(--main-color);
 }
@@ -489,11 +503,13 @@ button {
     background-color: var(--white);
     box-shadow: 0px 0px 5px var(--shadow2);
     transition: all ease 0.3s;
+    cursor: pointer;
 }
 
+/* 
 .testimonial:hover {
-    transform: translate(0, -10px);
-}
+    transform: translateY(-10px) !important;
+} */
 
 .author {
     display: flex;
@@ -543,12 +559,12 @@ button {
     gap: 20px;
     padding: 30px;
     border-radius: 15px;
-    border: 1px solid var(--p-gray);
+    border: 2px solid #dadada;
     transition: all ease 0.3s;
 }
 
 .plan:hover {
-    border: 1px solid var(--main-color);
+    border: 2px solid var(--main-color);
     box-shadow: 0px 0px 20px var(--shadow2);
 }
 
@@ -561,6 +577,7 @@ button {
     font-size: 2rem;
     font-weight: 600;
 }
+
 
 .plan span:nth-child(2),
 .plan li {
@@ -582,7 +599,8 @@ button {
 }
 
 .plan button:hover {
-    background-color: var(--white);
+    background-color: var(--main-color);
+    color: #fff;
 }
 
 .plan:nth-child(2) {
@@ -772,7 +790,7 @@ footer {
     align-items: center;
     width: 100vw;
     height: 400px;
-    background-color: #1e293b;
+    background-color: var(--footer-background);
     padding: 40px 10%;
 }
 
@@ -812,6 +830,11 @@ footer ul {
     list-style: none;
 }
 
+a {
+    cursor: pointer;
+    ;
+}
+
 .lower-container ul {
     display: flex;
     gap: 30px;
@@ -841,13 +864,13 @@ footer button {
     border-radius: 8px;
     padding: 5px;
     width: 100%;
-    background-color:#fff;
-    color: #1e293b;
+    background-color: #fff;
+    color: #1e293b !important;
     font-weight: 400;
 }
 
 footer a:hover {
-    color: var(--white);
+    color: #fff;
 }
 
 .navs {
@@ -984,8 +1007,20 @@ footer a:hover {
     }
 
     .pricing-section,
-    .testimonials-section {
-        padding: 10% 0%;
+    .testimonials-section,
+    .how-it-works-section,
+    .faq-section,
+    .integration-section {
+        margin: 0 !important;
+        padding: 5% 0% !important;
+    }
+
+    section header {
+        text-align: center;
+    }
+
+    .demo-section header {
+        text-align: left;
     }
 
     .pricing-plans {
@@ -1100,10 +1135,6 @@ footer a:hover {
         font-size: 0.8rem;
     }
 
-    .nav-wrapper {
-        display: none;
-    }
-
     .bx-menu {
         display: initial !important;
     }
@@ -1117,7 +1148,7 @@ footer a:hover {
         position: absolute;
         left: 0;
         top: -1000px;
-        background-color: rgba(255, 255, 255, 0.937);
+        background-color: var(--background-color);
         transition: all .50s ease;
     }
 
@@ -1167,8 +1198,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 800px) {
-
-
     .grid {
         min-height: 870px;
     }
@@ -1180,7 +1209,6 @@ footer a:hover {
     h1 {
         font-size: 40px;
     }
-
 
     .upper-container {
         display: grid !important;
@@ -1208,6 +1236,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 700px) {
+    .demo-section {
+        padding: 10% 5% !important;
+    }
+
     h1 {
         font-size: 35px;
     }
@@ -1243,6 +1275,14 @@ footer a:hover {
 }
 
 @media screen and (max-width: 500px) {
+
+    .pricing-section,
+    .testimonials-section,
+    .how-it-works-section,
+    .faq-section,
+    .integration-section {
+        padding: 10% 0% !important;
+    }
 
     .stat p {
         font-size: 10px !important;
@@ -1307,14 +1347,30 @@ footer a:hover {
         font-size: 25px !important;
     }
 
-
     .upper-container {
         display: flex !important;
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
         font-size: 0.8rem;
+    }
 
+
+    .wrapper {
+        grid-template: 90% 10% / 100%;
+    }
+
+
+    .lower-container {
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .lower-container p {
+        font-size: 0.7rem;
     }
 
     .footer-section:nth-child(1) {
@@ -1323,10 +1379,19 @@ footer a:hover {
         width: 100%;
     }
 
+    .footer-section:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-section:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
 
     .footer-section {
         padding: 0;
         max-width: 100% !important;
     }
-
 }

@@ -52,7 +52,7 @@ const sr2 = ScrollReveal({
     origin: "top",
     distance: "0px",
     duration: 1000,
-    reset: true
+    reset: false
 })
 
 sr2.reveal(".step:nth-child(1)", { delay: 100 });
@@ -72,3 +72,28 @@ window.onscroll = () => {
     menu.classList.remove("bx-x");
     navList.classList.remove("drop");
 };
+
+// dark and ligth mode toggle
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modeToggler = document.querySelector("#mode-toggler");
+    const body = document.body;
+  
+    // Load saved theme from localStorage
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+  
+    // Toggle dark mode on button click
+    modeToggler.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      modeToggler.classList.toggle('bx-moon');
+      modeToggler.classList.toggle('bx-sun');
+      // Save preference in localStorage
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
+  });
