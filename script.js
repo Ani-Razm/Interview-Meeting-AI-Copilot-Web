@@ -1,11 +1,11 @@
 // pauses marquee when you hover it
-// const partners = document.querySelector('.partners');
-// partners.addEventListener('mouseover', () => {
-//     partners.style.animationPlayState = 'paused';
-// });
-// partners.addEventListener('mouseout', () => {
-//     partners.style.animation = 'slide 10s linear infinite';
-// });
+const partners = document.querySelector('.partners');
+partners.addEventListener('mouseover', () => {
+    partners.style.animationPlayState = 'paused';
+});
+partners.addEventListener('mouseout', () => {
+    partners.style.animation = 'slide 10s linear infinite';
+});
 
 // hero background animation
 const gradient = document.querySelector('.rd-gradient');
@@ -37,24 +37,38 @@ for (let question of questions) {
 }
 
 // scroll reveal
-const sr = ScrollReveal({
+const sr1 = ScrollReveal({
     origin: "top",
-    distance: "60px",
+    distance: "50px",
     duration: 2000,
-    reset: true
+    reset: false
 })
 
-sr.reveal (".testimonial:nth-child(1)",{delay:100});
-sr.reveal (".testimonial:nth-child(2)",{delay:300});
-sr.reveal (".testimonial:nth-child(3)",{delay:500});
+sr1.reveal(".testimonial:nth-child(1)", { delay: 100 });
+sr1.reveal(".testimonial:nth-child(2)", { delay: 300 });
+sr1.reveal(".testimonial:nth-child(3)", { delay: 500 });
 
 const sr2 = ScrollReveal({
     origin: "top",
     distance: "0px",
-    duration: 2000,
+    duration: 1000,
     reset: true
 })
 
-sr2.reveal (".step:nth-child(1)",{delay:100});
-sr2.reveal (".step:nth-child(2)",{delay:400});
-sr2.reveal (".step:nth-child(3)",{delay:700});
+sr2.reveal(".step:nth-child(1)", { delay: 100 });
+sr2.reveal(".step:nth-child(2)", { delay: 400 });
+sr2.reveal(".step:nth-child(3)", { delay: 700 });
+
+// menu
+const menu = document.querySelector('.bx-menu');
+const navList = document.querySelector('.nav-wrapper')
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle("bx-x");
+    navList.classList.toggle("drop");
+});
+
+window.onscroll = () => {
+    menu.classList.remove("bx-x");
+    navList.classList.remove("drop");
+};
