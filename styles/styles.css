@@ -1275,7 +1275,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 500px) {
-
     .pricing-section,
     .testimonials-section,
     .how-it-works-section,
@@ -1355,11 +1354,9 @@ footer a:hover {
         font-size: 0.8rem;
     }
 
-
     .wrapper {
         grid-template: 90% 10% / 100%;
     }
-
 
     .lower-container {
         gap: 5px;
@@ -1388,7 +1385,6 @@ footer a:hover {
         grid-column: 2;
         grid-row: 2;
     }
-
 
     .footer-section {
         padding: 0;
