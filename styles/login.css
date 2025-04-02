@@ -335,5 +335,8 @@ i {
     body {
         grid-template: 1fr / 1fr;
     }
-}
 
+    .container-child {
+        width: 100%;
+    }
+}

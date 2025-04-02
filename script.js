@@ -79,17 +79,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const modeToggler = document.querySelector("#mode-toggler");
     const body = document.body;
   
-    // Load saved theme from localStorage
+    // load saved theme from localstorage
     if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-mode");
     }
   
-    // Toggle dark mode on button click
+    // toggle dark mode on button click
     modeToggler.addEventListener("click", () => {
       body.classList.toggle("dark-mode");
       modeToggler.classList.toggle('bx-moon');
       modeToggler.classList.toggle('bx-sun');
-      // Save preference in localStorage
+      // save preference in localstorage
       if (body.classList.contains("dark-mode")) {
         localStorage.setItem("theme", "dark");
       } else {
