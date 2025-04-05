@@ -73,27 +73,28 @@ window.onscroll = () => {
     navList.classList.remove("drop");
 };
 
-// dark and ligth mode toggle
-
+// dark and light mode toggle
 document.addEventListener("DOMContentLoaded", () => {
     const modeToggler = document.querySelector("#mode-toggler");
     const body = document.body;
   
     // load saved theme from localstorage
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
+    if (localStorage.getItem("theme") === "light") {
+      body.classList.add("light-mode");
+      modeToggler.classList.remove('bx-moon');
+      modeToggler.classList.add('bx-sun');
     }
   
     // toggle dark mode on button click
     modeToggler.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
-      modeToggler.classList.toggle('bx-moon');
+      body.classList.toggle("light-mode");
       modeToggler.classList.toggle('bx-sun');
+      modeToggler.classList.toggle('bx-moon');
       // save preference in localstorage
-      if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-      } else {
+      if (body.classList.contains("light-mode")) {
         localStorage.setItem("theme", "light");
+      } else {
+        localStorage.setItem("theme", "dark");
       }
     });
   });
